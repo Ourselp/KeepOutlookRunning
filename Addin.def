@@ -1,0 +1,10 @@
+; Addin.def : Declares the module parameters.
+
+LIBRARY    "KeepOutlookRunning.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+	DllInstall  		PRIVATE

@@ -1,0 +1,28 @@
+// Addin.idl : IDL source for KeepOutlookRunning
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Addin.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "ids.h"
+
+[
+	uuid(TYPELIB_GUID),
+	version(1.0),
+	helpstring("KeepOutlookRunning 1.0 Type Library")
+]
+library KeepOutlookRunningLib
+{
+	importlib("stdole2.tlb");
+
+	[
+		uuid(ADDIN_CLSID),
+		helpstring("Connect Class")
+	]
+	coclass Connect
+	{
+		[default] interface IUnknown;
+	};
+};

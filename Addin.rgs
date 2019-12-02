@@ -1,0 +1,59 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'KeepOutlookRunning'
+		'KeepOutlookRunning.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+	%PROGID%.1 = s 'Keep Outlook Running Connect Class Object'
+	{
+		CLSID = s '{%CLSID%}'
+	}
+	%PROGID% = s 'Keep Outlook Running Connect Class Object'
+	{
+		CLSID = s '{%CLSID%}'
+		CurVer = s '%PROGID%.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove '{%CLSID%}' = s 'Keep Outlook Running Connect Class Object'
+		{
+			ProgID = s '%PROGID%.1'
+			VersionIndependentProgID = s '%PROGID%'
+			'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{%TYPELIB%}'
+		}
+	}
+}
+HKCU
+{
+	NoRemove Software
+	{
+		NoRemove Microsoft
+		{
+			NoRemove Office
+			{
+				NoRemove Outlook
+				{
+					NoRemove Addins
+					{
+						%PROGID%
+						{
+							val Description = s 'Keep Outlook Running COM Addin'
+							val FriendlyName = s 'Keep Outlook Running COM Addin'
+							val LoadBehavior = d 3
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
