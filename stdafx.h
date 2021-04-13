@@ -54,8 +54,13 @@ using namespace Office;
 using namespace Outlook;
 
 // This addin type library
+#if defined(_WIN64)
+#import "x64\Release\KeepOutlookRunning.tlb"\
+	auto_rename auto_search raw_interfaces_only rename_namespace("KeepOutlookRunningAddin")
+#else
 #import "Release\KeepOutlookRunning.tlb"\
 	auto_rename auto_search raw_interfaces_only rename_namespace("KeepOutlookRunningAddin")
-using namespace KeepOutlookRunningAddin;
+#endif
 
+using namespace KeepOutlookRunningAddin;
 extern int g_verOLMajor;
