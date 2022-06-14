@@ -8,7 +8,7 @@ Im just reuploading it on github to make a save, this add-on work for outlook 20
 # Installation 
 
 1 - Install Microsoft Visual C++ 2010 SP1 Redistributable Package [32-bit](http://www.microsoft.com/en-us/download/details.aspx?id=8328) and [64-bit](http://www.microsoft.com/en-us/download/details.aspx?id=13523) (both required for x64 Windows)  
-2 - Download [KeepOutlookRunning.dll](http://sourceforge.net/projects/keepoutlook/files/0.0.1/)  
+2 - Download [KeepOutlookRunning.dll](http://sourceforge.net/projects/keepoutlook/files/0.0.1/)  32/64 bit  
 3 - Start Outlook as Administrator (right click on it in Start Menu)  
 4 - Go to File -> Options -> Add-Ins  
 5 - At the bottom: Manage [COM-Addins] press [Go...]  
